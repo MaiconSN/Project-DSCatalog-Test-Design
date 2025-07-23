@@ -1,0 +1,72 @@
+# Arquivos do Maven
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+
+# Arquivos de build
+build/
+
+# Arquivos temporários do Eclipse e IntelliJ
+*.iml
+*.classpath
+*.project
+*.settings/
+.idea/
+*.iws
+out/
+
+# Configurações locais
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.DS_Store
+
+# Sistema operacional
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Arquivos do sistema de execução
+*.pid
+
+# Configuração de execução do Spring Boot
+.spring-boot-devtools.properties
+
+# Arquivos de teste
+test-output/
+surefire-reports/
+jacoco.exec
+
+# Banco em memória
+*.h2.db
+*.mv.db
+*.trace.db
+
+# Variáveis de ambiente ou segredos
+.env
+*.secret
+*.key
+*.pem
+
+# Logs
+logs/
+*.log
+
+# node (caso use frontend integrado)
+node_modules/
+
+# Docker
+*.tar
+**/docker-compose.override.yml
+**/.env.docker
+
+# VS Code e outros editores
+.vscode/
+<<<<<<< HEAD
+*.code-workspace
+=======
+*.code-workspace
+>>>>>>> 530e1d96f42368842baa6346c159f1e2e1eba074
