@@ -1,0 +1,5 @@
+package com.myproject.dscatalog.exceptions;
+
+public class EntityNotFoundException extends RuntimeException{
+
+}
