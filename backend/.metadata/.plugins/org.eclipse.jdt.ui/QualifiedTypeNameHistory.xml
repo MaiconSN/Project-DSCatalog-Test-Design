@@ -23,9 +23,7 @@
     <fullyQualifiedTypeName name="com.myproject.dscatalog.exceptions.EntityNotFoundException"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ExceptionHandler"/>
-    <fullyQualifiedTypeName name="com.myproject.dscatalog.resources.exceptions.StandardError"/>
     <fullyQualifiedTypeName name="java.time.Instant"/>
-    <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
@@ -36,4 +34,13 @@
     <fullyQualifiedTypeName name="com.myproject.dscatalog.entities.Category"/>
     <fullyQualifiedTypeName name="jakarta.persistence.EntityNotFoundException"/>
     <fullyQualifiedTypeName name="com.myproject.dscatalog.exceptions.ResourceNotFoundException"/>
+    <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Propagation"/>
+    <fullyQualifiedTypeName name="com.myproject.dscatalog.resources.exceptions.StandardError"/>
+    <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
+    <fullyQualifiedTypeName name="com.myproject.dscatalog.exceptions.DatabaseException"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Column"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.PrePersist"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.PreUpdate"/>
+    <fullyQualifiedTypeName name="org.springframework.data.domain.Pageable"/>
+    <fullyQualifiedTypeName name="org.springframework.data.domain.Page"/>
 </qualifiedTypeNameHistroy>
