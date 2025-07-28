@@ -8,7 +8,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.myproject.dscatalog.dto.CategoryDTO;
 import com.myproject.dscatalog.dto.ProductDTO;
+import com.myproject.dscatalog.entities.Category;
 import com.myproject.dscatalog.entities.Product;
 import com.myproject.dscatalog.exceptions.DatabaseException;
 import com.myproject.dscatalog.exceptions.ResourceNotFoundException;
@@ -21,38 +23,37 @@ public class ProductService {
 
 	@Autowired
 	private ProductRepository repository;
-	
+
 	@Transactional(readOnly = true)
-	public Page<ProductDTO> findAll(Pageable pageable){
+	public Page<ProductDTO> findAll(Pageable pageable) {
 		Page<Product> list = repository.findAll(pageable);
-		
+
 		return list.map(x -> new ProductDTO(x));
 	}
-	
+
 	@Transactional(readOnly = true)
 	public ProductDTO findById(Long id) {
 		Product entity = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Entity not found"));
 		return new ProductDTO(entity, entity.getCategories());
 	}
-	
+
 	@Transactional
 	public ProductDTO insert(ProductDTO dto) {
 		Product entity = new Product();
-		//entity.setName(dto.getName());
+		copyDtoToEntity(dto, entity);
 		entity = repository.save(entity);
 		return new ProductDTO(entity);
 	}
-	
+
 	@Transactional
 	public ProductDTO update(Long id, ProductDTO dto) {
 		try {
 			Product entity = repository.getReferenceById(id);
-			//entity.setName(dto.getName());
+			copyDtoToEntity(dto, entity);
 			entity = repository.save(entity);
-			
+
 			return new ProductDTO(entity);
-		}
-		catch(EntityNotFoundException e) {
+		} catch (EntityNotFoundException e) {
 			throw new ResourceNotFoundException("Id Not Found");
 		}
 	}
@@ -63,12 +64,23 @@ public class ProductService {
 			throw new ResourceNotFoundException("Recurso não encontrado");
 		}
 		try {
-	        	repository.deleteById(id);    		
+			repository.deleteById(id);
+		} catch (DataIntegrityViolationException e) {
+			throw new DatabaseException("Falha de integridade referencial");
 		}
-	    	catch (DataIntegrityViolationException e) {
-	        	throw new DatabaseException("Falha de integridade referencial");
-	   	}
 	}
-	
-	
+
+	private void copyDtoToEntity(ProductDTO dto, Product entity) {
+		entity.setName(dto.getName());
+		entity.setDescription(dto.getDescription());
+		entity.setDate(dto.getDate());
+		entity.setPrice(dto.getPrice());
+		entity.setImgUrl(dto.getImgUrl());
+
+		entity.getCategories().clear();
+		for (CategoryDTO catDTO : dto.getCategories()) {
+			entity.getCategories().add(new Category(catDTO.getId(), catDTO.getName()));
+		}
+	}
+
 }
