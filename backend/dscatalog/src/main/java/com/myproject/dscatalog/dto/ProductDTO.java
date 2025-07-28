@@ -3,7 +3,9 @@ package com.myproject.dscatalog.dto;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.myproject.dscatalog.entities.Category;
 import com.myproject.dscatalog.entities.Product;
 
@@ -16,6 +18,7 @@ public class ProductDTO {
 	private String imgUrl;
 	private Instant date;
 	
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
 	private List<CategoryDTO> categories = new ArrayList<>();
 
 	public ProductDTO() {
@@ -37,8 +40,11 @@ public class ProductDTO {
 		this.price = entity.getPrice();
 		this.imgUrl = entity.getImgUrl();
 		this.date = entity.getDate();
-		
-		for(Category cat : entity.getCategories()){
+	}
+	
+	public ProductDTO(Product entity, Set<Category> set) {
+		this(entity);		
+		for(Category cat : set){
 			categories.add(new CategoryDTO(cat));
 		}
 	}
