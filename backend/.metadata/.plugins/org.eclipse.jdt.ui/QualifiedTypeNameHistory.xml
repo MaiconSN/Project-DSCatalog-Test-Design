@@ -42,9 +42,10 @@
     <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
     <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
-    <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="com.myproject.dscatalog.entities.Category"/>
     <fullyQualifiedTypeName name="com.myproject.dscatalog.dto.CategoryDTO"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="com.myproject.dscatalog.dto.ProductDTO"/>
 </qualifiedTypeNameHistroy>
