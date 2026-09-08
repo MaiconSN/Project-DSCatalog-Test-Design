@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.SpringBootApplication"/>
-    <fullyQualifiedTypeName name="org.springframework.boot.SpringApplication"/>
-    <fullyQualifiedTypeName name="com.myproject.dscatalog.DsCatalogApplication"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
@@ -11,16 +8,13 @@
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="jakarta.transaction.Transactional"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
-    <fullyQualifiedTypeName name="java.util.Optional"/>
     <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ControllerAdvice"/>
     <fullyQualifiedTypeName name="com.myproject.dscatalog.exceptions.EntityNotFoundException"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ExceptionHandler"/>
-    <fullyQualifiedTypeName name="java.time.Instant"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
@@ -28,7 +22,6 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
     <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
     <fullyQualifiedTypeName name="jakarta.persistence.EntityNotFoundException"/>
-    <fullyQualifiedTypeName name="com.myproject.dscatalog.exceptions.ResourceNotFoundException"/>
     <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Propagation"/>
     <fullyQualifiedTypeName name="com.myproject.dscatalog.resources.exceptions.StandardError"/>
     <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
@@ -47,12 +40,24 @@
     <fullyQualifiedTypeName name="com.myproject.dscatalog.entities.Category"/>
     <fullyQualifiedTypeName name="com.myproject.dscatalog.dto.CategoryDTO"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
-    <fullyQualifiedTypeName name="com.myproject.dscatalog.dto.ProductDTO"/>
     <fullyQualifiedTypeName name="tests.factory.AccountFactory"/>
     <fullyQualifiedTypeName name="entities.Account"/>
-    <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
-    <fullyQualifiedTypeName name="org.junit.jupiter.api.Assertions"/>
     <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
     <fullyQualifiedTypeName name="entities.Financing"/>
     <fullyQualifiedTypeName name="tests.entities.factory.FinancingFactory"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.SpringBootApplication"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.SpringApplication"/>
+    <fullyQualifiedTypeName name="com.myproject.dscatalog.DsCatalogApplication"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.test.context.SpringBootTest"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.Assertions"/>
+    <fullyQualifiedTypeName name="com.myproject.dscatalog.exceptions.ResourceNotFoundException"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.BeforeEach"/>
+    <fullyQualifiedTypeName name="com.myproject.dscatalog.entities.Product"/>
+    <fullyQualifiedTypeName name="java.time.Instant"/>
+    <fullyQualifiedTypeName name="com.myproject.dscatalog.dto.ProductDTO"/>
+    <fullyQualifiedTypeName name="com.myproject.dscatalog.tests.factory.ProductFactory"/>
 </qualifiedTypeNameHistroy>
