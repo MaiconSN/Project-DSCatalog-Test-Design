@@ -1,5 +1,0 @@
-package com.myproject.dscatalog.repositories;
-
-public class CategoryRepository {
-
-}

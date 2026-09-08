@@ -48,4 +48,11 @@
     <fullyQualifiedTypeName name="com.myproject.dscatalog.dto.CategoryDTO"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="com.myproject.dscatalog.dto.ProductDTO"/>
+    <fullyQualifiedTypeName name="tests.factory.AccountFactory"/>
+    <fullyQualifiedTypeName name="entities.Account"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.Assertions"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+    <fullyQualifiedTypeName name="entities.Financing"/>
+    <fullyQualifiedTypeName name="tests.entities.factory.FinancingFactory"/>
 </qualifiedTypeNameHistroy>
