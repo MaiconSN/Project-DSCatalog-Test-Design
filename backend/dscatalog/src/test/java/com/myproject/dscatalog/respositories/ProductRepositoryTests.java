@@ -19,12 +19,14 @@ public class ProductRepositoryTests {
 	private ProductRepository repository;
 	
 	private long exintingId;
+	private long nonExistId;
 	private long totalValueIdInDataBase;
 	private Product product = ProductFactory.createdProduct();
 	
 	@BeforeEach
 	void setUp() throws Exception {
 		exintingId = 1L;
+		nonExistId = 1000L;
 		totalValueIdInDataBase = 25L;
 		product.setId(null);
 	}
@@ -45,6 +47,17 @@ public class ProductRepositoryTests {
 		Assertions.assertFalse(result.isPresent());
 	}
 	
+	@Test
+	public void findByIdShouldReturnOptionalNotEmptyWhenIdExists() {
+		Optional<Product> result = repository.findById(exintingId);
+		Assertions.assertTrue(result.isPresent());
+	}
+	
+	@Test
+	public void findByIdShouldReturnOptionalEmptyWhenIdNotExist() {
+		Optional<Product> result = repository.findById(nonExistId);
+		Assertions.assertTrue(!result.isPresent());
+	}
 	
 
 }
