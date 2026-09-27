@@ -8,7 +8,6 @@ build/
 
 # Eclipse metadata
 .metadata/
-backend/.metadata/
 
 # Arquivos compilados
 bin/
