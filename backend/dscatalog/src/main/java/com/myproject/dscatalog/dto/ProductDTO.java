@@ -9,13 +9,25 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.myproject.dscatalog.entities.Category;
 import com.myproject.dscatalog.entities.Product;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.PastOrPresent;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
+
 public class ProductDTO {
 	
 	private Long id;
+	
+	@Size(min = 5, max = 60, message = "Deve ter entre 5 e 60 caracteres")
+	@NotBlank(message = "Campo obrigatório")
 	private String name;
 	private String description;
+	
+	@Positive(message = "Preço deve ser positivo")
 	private Double price;
 	private String imgUrl;
+	
+	@PastOrPresent(message = "Data não pode ser futura")
 	private Instant date;
 	
 	@JsonInclude(JsonInclude.Include.NON_EMPTY)
